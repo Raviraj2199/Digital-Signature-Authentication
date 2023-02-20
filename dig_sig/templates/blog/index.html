@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<header>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- styles -->
+
+  <div class="container" align="center"><h3>{% block title %}Welcome to your dashboard{% endblock %}</h3></div>
+  
+</header>
+{% endblock %}
+<body>
+{% block content %}
+<div class="row">
+<div class="col-md-6 ml-auto mr-auto">
+<div class="card">
+   <div class="card-body">
+      <h5 class="card-title">New Application</h5>
+      <p class="card-text">To apply new letter please click the button.</p>
+
+     
+   
+      <button class="btn btn-primary btn-round" type="button" id="btn_1" value="Apply Now" onclick="window.location.href='{{ url_for( 'blog.create') }}';">Apply Now</button>
+
+      </div>
+   
+    </div>
+    
+      
+<div class="card">
+  <div class="card-body">
+      <h5 class="card-title">Pending Applications</h5>
+      <p class="card-text">Check Pending Applications.</p>
+      <button class="btn btn-primary btn-round" id="btn_2" type="button" value="Check Now" onclick="window.location.href='{{ url_for( 'blog.home') }}';">Check Now</button>
+      </div>
+   </div>
+</div>
+</div>
+  {%endblock%}
+</body>
